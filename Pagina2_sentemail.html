@@ -52,23 +52,10 @@ body{
   font-weight: 300;
   text-align: center;
 }
-.form{
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-.label{
-  font-size: var(--sm);
-  font-weight: bold;
-  margin-bottom: 4px;
-}
-.input{
-  background-color: var(--text-input-field);
-  border: none;
-  border-radius:8px;
-  height: 32px;
-  font-size: var(--md);
-  padding: 8px;
+.email-image{
+  display: grid;
+  place-items: center;
+  padding: 64px;
 }
 .primary-button{
   background-color: var(--hospital-green);
@@ -86,6 +73,15 @@ body{
   margin-bottom:48px;
 }
 
+.resend{
+  font-weight: bold;
+  text-align: center;
+}
+.resend a {
+  text-decoration: none;
+  color:var(--hospital-green);
+  
+}
 @media(max-width:720px){
   .logo{
     display: block;
@@ -97,19 +93,16 @@ body{
 <main class="login">
 <div class="form-container">
   <img alt="logo" src="./logos/logo_yard_sale.svg" class="logo">
-<h1 class="title">Create new account</h1>
-<p class="subtitle">Please choose a nickname and password</p>
-<form action="/" class="form">
-  
-<label for="passwrd" class="label">Password</label>
-<input type="password" class="input input-password" id="passwrd" placeholder="*********">
-
-<label for="new-password" class="label">Repeat password</label>
-<input type="password" class="input input-password" id="new-password" placeholder="*********">
-
-<input type="submit" class="primary-button login-button" value="Confirm">
-
-</form> 
+<h1 class="title">Email has been sent!</h1>
+<p class="subtitle">Please check your inbox for instructions on how to reset your password</p>
+<div class="email-image">
+  <img src="icons/email.svg" alt="envelope">
+</div>
+<button class="primary-button login-button">Log in</button>
+<p class="resend">
+  <span> Didn't recieve the email? </span>
+  <a href="">Resend</a>
+</p>
 </div>
 </main>
 
