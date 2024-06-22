@@ -29,39 +29,40 @@ body{
   place-items: center;
 }
 .form-container{
-  display: grid;
-  grid-template-rows: auto 1fe auto;
-  width: 300px;
-}
-.logo{
-  width: 150px;
-  margin-bottom: 48px;
-  justify-self: center;
-  display: none;
-}
-.title{
-  font-size: var(--lg);
-  margin-bottom: 12px;
-  text-align: center;
-}
-.subtitle{
-  font-size: var(--md);
-  margin-top: 0;
-  margin-bottom: 8px;
-  color: var(--very-light-pink);
-  font-weight: 300;
-  text-align: center;
-}
-.form{
   display: flex;
   flex-direction: column;
+  width: 300px;
+}
+
+.title{
+  font-size: var(--lg);
+  margin-bottom: 36px;
+}
+
+.form{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   gap: 12px;
+}
+
+.label-group {
+  display: flex;
+  flex-direction: column;
+  gap:24px;
+}
+
+.label-input {
+  display: flex;
+  flex-direction: column;
+  gap:8px
 }
 .label{
   font-size: var(--sm);
   font-weight: bold;
-  margin-bottom: 4px;
 }
+
 .input{
   background-color: var(--text-input-field);
   border: none;
@@ -83,31 +84,40 @@ body{
 }
 .login-button{
   margin-top:24px;
-  margin-bottom:48px;
+  margin-bottom:24px;
 }
 
 @media(max-width:720px){
-  .logo{
-    display: block;
+  .form-container{
+    height: 100%;
   }
 }
+
 </style>
 </head>
 <body>
 <main class="login">
 <div class="form-container">
-  <img alt="logo" src="./logos/logo_yard_sale.svg" class="logo">
-<h1 class="title">Create new account</h1>
-<p class="subtitle">Please create a new password</p>
-<form action="/" class="form">
   
-<label for="passwrd" class="label">Password</label>
-<input type="password" class="input input-password" id="passwrd" placeholder="*********">
+<h1 class="title">My account</h1>
+<form action="/" class="form">
+<div class="label-group">
+<div class="label-input">
+<label for="name" class="label">Name</label>
+<input type="text" class="input input-name" id="name" placeholder="Your name">
+</div>
+<div class="label-input">
+<label for="insert-email" class="label">Email address</label>
+<input type="email" class="input input-email" id="input-email" placeholder="example@email.com">
+</div>
+<div class="label-input">
+<label for="password" class="label">Password</label>
+<input type="password" class="input input-password" id="password" placeholder="*********">
+</div>
+</div>
 
-<label for="new-password" class="label">Repeat password</label>
-<input type="password" class="input input-password" id="new-password" placeholder="*********">
 
-<input type="submit" class="primary-button login-button" value="Confirm">
+<input type="submit" class="primary-button login-button" value="Create">
 
 </form> 
 </div>
