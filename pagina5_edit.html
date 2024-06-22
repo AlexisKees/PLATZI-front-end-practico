@@ -63,26 +63,22 @@ body{
   font-weight: bold;
 }
 
-.input{
-  background-color: var(--text-input-field);
-  border: none;
-  border-radius:8px;
-  height: 32px;
+.value{
+  color: var(--very-light-pink);
   font-size: var(--md);
-  padding: 8px;
 }
-.primary-button{
-  background-color: var(--hospital-green);
-  border: none;
+.secondary-button{
+  background-color: var(--white);
+  border: 1px solid var(--hospital-green);
   border-radius: 8px;
   padding: 8px;
-  color: var(--white);
+  color: var(--hospital-green);
   height: 3rem;
   cursor: pointer;
   font-size: var(--md);
   font-weight: bold;
 }
-.login-button{
+.edit-button{
   margin-top:24px;
   margin-bottom:24px;
 }
@@ -104,20 +100,19 @@ body{
 <div class="label-group">
 <div class="label-input">
 <label for="name" class="label">Name</label>
-<input type="text" class="input input-name" id="name" placeholder="Your name">
+<p class="value">Nombre Apellido</p>
 </div>
 <div class="label-input">
 <label for="insert-email" class="label">Email address</label>
-<input type="email" class="input input-email" id="input-email" placeholder="example@email.com">
+<p class="value">example@email.com</p>
 </div>
 <div class="label-input">
 <label for="password" class="label">Password</label>
-<input type="password" class="input input-password" id="password" placeholder="*********">
+<p class="value">**********</p>
 </div>
 </div>
 
-
-<input type="submit" class="primary-button login-button" value="Create">
+<button class="secondary-button edit-button">Edit</button
 
 </form> 
 </div>
