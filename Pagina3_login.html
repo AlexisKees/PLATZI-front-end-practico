@@ -76,19 +76,45 @@ body{
   border-radius: 8px;
   padding: 8px;
   color: var(--white);
-  height: 3rem;
+  height: 48px;
   cursor: pointer;
   font-size: var(--md);
   font-weight: bold;
 }
 .login-button{
   margin-top:24px;
-  margin-bottom:48px;
 }
 
+.form a {
+  text-align: center;
+  color: var(--hospital-green);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.secondary-button {
+  border: 1px solid var(--hospital-green);
+  background-color: var(--white);
+  height: 48px;
+  width: 300px;
+  padding: 8px;
+  border-radius: 8px;
+  margin-top: 48px;
+}
+
+.secondary-button a {
+  color: var(--hospital-green);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: var(--md);
+}
 @media(max-width:720px){
   .logo{
     display: block;
+  }
+  .secondary-button {
+    position: absolute;
+    bottom: 24px;
   }
 }
 </style>
@@ -101,14 +127,17 @@ body{
 <p class="subtitle">Please create a new password</p>
 <form action="/" class="form">
   
-<label for="passwrd" class="label">Password</label>
-<input type="password" class="input input-password" id="passwrd" placeholder="*********">
+<label for="insert-email" class="label">Email address</label>
+<input type="email" class="input input-email" id="input-email" placeholder="example@email.com">
 
-<label for="new-password" class="label">Repeat password</label>
-<input type="password" class="input input-password" id="new-password" placeholder="*********">
+<label for="password" class="label">Password</label>
+<input type="password" class="input input-password" id="password" placeholder="*********">
 
 <input type="submit" class="primary-button login-button" value="Confirm">
 
+<a href="/">Forgot my password</a>
+
+<button class="secondary-button button"><a href="">Sign up</a></button>
 </form> 
 </div>
 </main>
