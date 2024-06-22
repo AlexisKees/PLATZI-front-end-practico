@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<title>Pagina 1</title>
+<meta name='viewport' content='width=devie-width, initial-scale=1'>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --very-light-pink: #C7C7C7;
+  --text-input-field: #F7F7F7;
+  --hospital-green: #ACD9B2;
+  --white: #FFF;
+  --black: #000;
+  --sm: 14px;
+  --md: 16px;
+  --lg: 18px;
+}
+body{
+  font-family: "Quicksand";
+  margin: 0;
+}
+.login{
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+.form-container{
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.title{
+  font-size: var(--lg);
+  margin-bottom: 36px;
+}
+
+.form{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.label-group {
+  display: flex;
+  flex-direction: column;
+  gap:24px;
+}
+
+.label-input {
+  display: flex;
+  flex-direction: column;
+  gap:8px
+}
+.label{
+  font-size: var(--sm);
+  font-weight: bold;
+}
+
+.input{
+  background-color: var(--text-input-field);
+  border: none;
+  border-radius:8px;
+  height: 32px;
+  font-size: var(--md);
+  padding: 8px;
+}
+.primary-button{
+  background-color: var(--hospital-green);
+  border: none;
+  border-radius: 8px;
+  padding: 8px;
+  color: var(--white);
+  height: 3rem;
+  cursor: pointer;
+  font-size: var(--md);
+  font-weight: bold;
+}
+.login-button{
+  margin-top:24px;
+  margin-bottom:24px;
+}
+
+@media(max-width:720px){
+  .form-container{
+    height: 100%;
+  }
+}
+
+</style>
+</head>
+<body>
+<main class="login">
+<div class="form-container">
+  
+<h1 class="title">My account</h1>
+<form action="/" class="form">
+<div class="label-group">
+<div class="label-input">
+<label for="name" class="label">Name</label>
+<input type="text" class="input input-name" id="name" placeholder="Your name">
+</div>
+<div class="label-input">
+<label for="insert-email" class="label">Email address</label>
+<input type="email" class="input input-email" id="input-email" placeholder="example@email.com">
+</div>
+<div class="label-input">
+<label for="password" class="label">Password</label>
+<input type="password" class="input input-password" id="password" placeholder="*********">
+</div>
+</div>
+
+
+<input type="submit" class="primary-button login-button" value="Create">
+
+</form> 
+</div>
+</main>
+
+</body>
+</html>
